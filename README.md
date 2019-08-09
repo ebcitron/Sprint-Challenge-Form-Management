@@ -26,13 +26,27 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] What are the required parts of class components?
 
+Credence clearwater revival
+
 - [ ] Name at least three lifecycle methods?
+
+    CDM CDupdate CDunmount
+
 
 - [ ] Why are forms used so often in web applications and software?
 
+    It is the main way users can input data
+
+
 - [ ] What advantages are there by using a forms library like Formik?
 
+    Not having to worry about submission
+
+
 - [ ] Why do we write tests for our apps?
+
+    To ensure a happy customer
+    
 
 ## Project Set Up
 
