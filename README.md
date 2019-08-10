@@ -45,7 +45,7 @@ Credence clearwater revival
 
 - [ ] Why do we write tests for our apps?
 
-    To ensure a happy customer
+    To ensure a happy customer4
 
 
 ## Project Set Up
@@ -96,9 +96,9 @@ and the response object will look like this:
 }
 ```
 
-- [ ] A GET request made to `http://localhost:5000/api/restricted/data` to retrieve the data
+- [x ] A GET request made to `http://localhost:5000/api/restricted/data` to retrieve the data
 
-- [ ] Map over the array of objects you recieve and render some or all of it's information to the DOM.
+- [ x] Map over the array of objects you recieve and render some or all of it's information to the DOM.
 
 ## Stretch Problems
 
