@@ -6,7 +6,6 @@ import axios from 'axios';
 
 const Formie = ( {errors, touched, values, handleSubmit, status} ) => {
     const [state, setState] = useState([])
-
     useEffect(()=>{
         if(status){setState([...state, status])}
     }, [status]);
@@ -19,7 +18,7 @@ const Formie = ( {errors, touched, values, handleSubmit, status} ) => {
             <Field type = "text" name = "username" placeholder = "Username" />
             {touched.password && errors.password && <p className="error">{errors.password}</p>}
             <Field type = "password" name = "password" placeholder = "Password" />
-            <button type = "submit">Submit!</button>   
+            <button onClick = {handleSubmit} type = "submit">Submit!</button>   
         </Form> 
         <div className="userState">
           {state.map(user=> {
@@ -43,20 +42,22 @@ const FormikForm = withFormik({
         username: yup.string()
         .required(
             "Username Is Required"
-        ),
-        password: yup.string()
-        .min(6, "Passwords gotta be longer than 6 chars")
-        .required("Password Is Required")
-         }),
-
-
+            ),
+            password: yup.string()
+            .min(6, "Passwords gotta be longer than 6 chars")
+            .required("Password Is Required")
+        }),
         
-         handleSubmit(values, {setStatus}){
-        console.log(values);
+        
+        
+        handleSubmit(values, {setStatus}){
+            console.log("Form values", values);
+            URL = 'http://localhost:5000/api/register'
         axios
         .post(URL, values)
         .then( res => {
             console.log("RES: ", res);
+            alert("POST values and RES data in C Log")
               setStatus(res.data);
         })
         .catch(err => console.log('err', err));

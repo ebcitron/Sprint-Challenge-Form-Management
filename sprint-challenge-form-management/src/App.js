@@ -2,11 +2,14 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Registration from './components/Registration';
+import Display from './components/Display';
 
-function App() {
+class App extends React.Component{
+render(){
   return (
     <div className="App">
       <header className="App-header">
+        <Display />
         <Registration />
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -17,5 +20,5 @@ function App() {
     </div>
   );
 }
-
+}
 export default App;
