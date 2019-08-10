@@ -20,7 +20,7 @@ const Formie = ( {errors, touched, values, handleSubmit, status} ) => {
             {touched.password && errors.password && <p className="error">{errors.password}</p>}
             <Field type = "password" name = "password" placeholder = "Password" />
             <button type = "submit">Submit!</button>   
-        </Form>
+        </Form> 
         <div className="userState">
           {state.map(user=> {
               return <p key={user.name} > {user.password}</p>
